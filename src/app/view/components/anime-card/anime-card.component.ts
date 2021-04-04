@@ -5,13 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './anime-card.component.html',
   styleUrls: ['./anime-card.component.css']
 })
-export class AnimeCardComponent{// implements OnInit {
+export class AnimeCardComponent{
   animeTitle = 'default title'
+  mediaLength = '3:00'
+  source = './../../../assets/konosuba.png'
+  altText = 'konosuba'
 
   constructor() { }
-
-  /*ngOnInit(): void {
-
-  }*/
-
 }
