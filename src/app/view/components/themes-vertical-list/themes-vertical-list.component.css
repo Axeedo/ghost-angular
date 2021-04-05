@@ -1,0 +1,13 @@
+mat-nav-list {
+  height: 80vh;
+  /*overflow-y: scroll;*/
+}
+.list-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.list-item:hover {
+  transform: translateY(-0.2rem);
+  transform: translateX(-0.5rem);
+  fill: rgb(105, 103, 103);
+}

@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
+import { ThemesAnime} from 'src/app/interface/anime-themes';
 
+/**
+ * An anime cart
+ */
 @Component({
   selector: 'app-anime-card',
   templateUrl: './anime-card.component.html',
   styleUrls: ['./anime-card.component.css']
 })
 export class AnimeCardComponent{
-  animeTitle = 'default title'
-  mediaLength = '3:00'
-  source = './../../../assets/konosuba.png'
-  altText = 'konosuba'
+  @Input()
+  animeItem!: ThemesAnime;
 
-  constructor() { }
+  constructor() {
+  }
 }

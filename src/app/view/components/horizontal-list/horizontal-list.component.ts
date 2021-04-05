@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ThemesAnime } from 'src/app/interface/anime-themes';
 
 @Component({
   selector: 'app-horizontal-list',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horizontal-list.component.css']
 })
 export class HorizontalListComponent {
-
-  constructor() { }
-
+  @Input() animeList: ThemesAnime[];
+  
+  constructor() { 
+    this.animeList = [];
+  }
 }
