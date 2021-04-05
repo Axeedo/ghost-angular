@@ -13,7 +13,8 @@ import { AnimeCardComponent } from './view/anime-card/anime-card.component';
 import { MainMenuComponent } from './view/main-menu/main-menu.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RecentComponent } from './view/recent/recent.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { QuizComponent } from './view/quiz/quiz.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { QuizComponent } from './quiz/quiz.component';
     MatIconModule,
     MatCardModule,
     MatCheckboxModule,
-    NgxAudioPlayerModule
+    NgxAudioPlayerModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
