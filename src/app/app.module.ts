@@ -19,7 +19,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatRippleModule, MAT_RIPPLE_GLOBAL_OPTIONS, RippleGlobalOptions} from '@angular/material/core';
+import {MatRippleModule, MAT_RIPPLE_GLOBAL_OPTIONS} from '@angular/material/core';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 /* Video modules */
@@ -44,6 +45,7 @@ import { ThemeCardComponent } from './view/components/theme-card/theme-card.comp
 import { VideoPlayerComponent } from './view/components/video-player/video-player.component'; 
 import {ListComponent} from './view/pages/list/list.component'; 
 import { AppGlobalRippleOptionsService } from './service/global-ripple-options/app-global-ripple-options.service';
+import { GridAnimeListComponent } from './view/components/grid-anime-list/grid-anime-list.component';
 
 
 @NgModule({
@@ -61,6 +63,7 @@ import { AppGlobalRippleOptionsService } from './service/global-ripple-options/a
     ThemeCardComponent,
     VideoPlayerComponent,
     ListComponent,
+    GridAnimeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,6 +89,7 @@ import { AppGlobalRippleOptionsService } from './service/global-ripple-options/a
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatRippleModule,
+    MatGridListModule,
 
     /* Video modules */
     VgCoreModule,

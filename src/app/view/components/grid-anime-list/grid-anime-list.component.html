@@ -1,0 +1,6 @@
+<!--todo: make layout responsive-->
+<mat-grid-list cols="4" rowHeight="500px">
+  <mat-grid-tile *ngFor="let anime of animeList">
+    <app-anime-card class="card" [animeItem]="anime"></app-anime-card>
+  </mat-grid-tile>
+</mat-grid-list>

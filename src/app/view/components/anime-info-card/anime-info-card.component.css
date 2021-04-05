@@ -1,5 +1,6 @@
 .info-card {
   background: var(--cart-background);
+  flex: 1 1 auto;
 }
 .anime-image {
   background-size: cover;

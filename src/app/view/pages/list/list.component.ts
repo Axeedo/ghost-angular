@@ -18,8 +18,8 @@ export class ListComponent implements OnInit {
   anime ?: ThemesAnime;
   isRequest = false
 
-  pageSize = 10;
-  pageSizeOptions: number[] = [5, 10, 25, 100];
+  pageSize = 20;
+  pageSizeOptions: number[] = [12, 20, 28, 40];
 
   constructor(private route: ActivatedRoute, 
     private animeTheme : AnimeThemesService,
