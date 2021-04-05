@@ -1,6 +1,10 @@
 import { Component, Input} from '@angular/core';
 import { Theme, ThemesAnime } from 'src/app/interface/anime-themes';
 
+/**
+ * Anime info card
+ * Usage: under the video player in anime page
+ */
 @Component({
   selector: 'app-anime-info-card',
   templateUrl: './anime-info-card.component.html',
