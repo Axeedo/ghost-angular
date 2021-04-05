@@ -34,6 +34,7 @@ export class AnimeComponent implements OnInit{
     this.service.getAnime(id)
     .then((data) => {
       this.anime = data;
+      this.storeRecent(data);
       this.currentTheme = 0;
       this.isURLReady = true;
     }).catch(
@@ -48,5 +49,17 @@ export class AnimeComponent implements OnInit{
      selected theme from the themes list.*/
   OnChangeTheme(newTheme:number){
     this.currentTheme = newTheme;
+  }
+
+  /* 
+  * Store the anime info in the localstorage to get recent searchs.
+  */
+  storeRecent(data: ThemesAnime){
+    let recents : Array<ThemesAnime> = JSON.parse(localStorage.getItem("recents") || '[]')
+    recents.push(data)
+    if(recents.length > 10){
+      recents = recents.slice(1,recents.length);
+    }
+    localStorage.setItem("recents", JSON.stringify(recents)) 
   }
 }

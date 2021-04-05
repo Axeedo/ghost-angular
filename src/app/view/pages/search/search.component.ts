@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ThemesAnime } from 'src/app/interface/anime-themes';
 import { AnimeThemesService} from 'src/app/service/anime-themes/anime-themes.service';
 import {PageEvent} from '@angular/material/paginator';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -21,27 +21,29 @@ export class SearchComponent {
   provider = "mal";
   pseudo = "";
 
-  length = 100;
   pageSize = 10;
   pageSizeOptions: number[] = [5, 10, 25, 100];
 
   constructor(private route: ActivatedRoute, 
-    private animeThemeService : AnimeThemesService,
-    private router : Router) {
+    private animeTheme : AnimeThemesService,
+    private router : Router,
+    private _snackBar: MatSnackBar
+    ) {
   }
 
   doSearch(){
     this.isRequest = true;
     const name = this.searchParam;
-    this.animeThemeService.searchAnime(name)
+    this.animeTheme.searchAnime(name)
     .then((data) => {
-      console.log(data)
       this.results = data
       this.resultsToShow = this.results.slice(0,this.pageSize)
       
     }).catch(
       (err) => {
-        console.log(err)
+        this._snackBar.open("Something went wrong with the request", "Understand", {
+          duration: 2000,
+        });
       }
     ).finally(()=>{
       this.isRequest = false;
