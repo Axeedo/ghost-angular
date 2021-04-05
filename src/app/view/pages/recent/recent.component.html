@@ -1,1 +1,2 @@
-<app-horizontal-list [animeList]="recentList"></app-horizontal-list>
+<!-- reverse so that the most recent is displayed first -->
+<app-grid-anime-list [animeList]="recentList.reverse()"></app-grid-anime-list>
