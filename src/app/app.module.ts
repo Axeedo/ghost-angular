@@ -46,6 +46,7 @@ import { VideoPlayerComponent } from './view/components/video-player/video-playe
 import {ListComponent} from './view/pages/list/list.component'; 
 import { AppGlobalRippleOptionsService } from './service/global-ripple-options/app-global-ripple-options.service';
 import { GridAnimeListComponent } from './view/components/grid-anime-list/grid-anime-list.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -101,7 +102,8 @@ import { GridAnimeListComponent } from './view/components/grid-anime-list/grid-a
   providers: [
     {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: AppGlobalRippleOptionsService}
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { 
   constructor(){
