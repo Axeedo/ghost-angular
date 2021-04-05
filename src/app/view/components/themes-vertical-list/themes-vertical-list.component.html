@@ -1,0 +1,27 @@
+<section>
+  <div>
+    <h1>OST List:</h1>
+  </div>
+  <!--ul cdkScrollable>
+    <li class="list-item" *ngFor="let theme of themeList; let index = index">
+      <app-theme-card
+        [theme]="theme"
+        [index]="index"
+        (click)="onClick(index)"
+      ></app-theme-card>
+    </li>
+  </!--ul-->
+  <mat-list cdkScrollable>
+    <div
+      mat-list-item
+      class="list-item"
+      *ngFor="let theme of themeList; let index = index"
+    >
+      <app-theme-card
+        [theme]="theme"
+        [index]="index"
+        (click)="onClick(index)"
+      ></app-theme-card>
+    </div>
+  </mat-list>
+</section>
